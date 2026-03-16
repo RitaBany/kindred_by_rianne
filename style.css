@@ -1,0 +1,205 @@
+body {
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
+    font-size: medium;
+}
+
+h1 {
+    text-align:justify;
+    color: darkblue;
+}
+
+p {
+    color: black;
+    font-size: 18px;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;   /* moves links to the right */
+    gap: 20px;                   /* space between links */
+    background-color:brown;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+    font-family:'Times New Roman';
+}
+.slider {
+    width: 1000px;
+    height: 350px;
+    position: relative;
+}
+
+.slider figure {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    animation: slide 9s infinite;
+}
+
+.slider img {
+    width: 600px;
+    height: 300px;
+}
+
+figcaption {
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 5px;
+}
+
+.slider {
+    width: 800px !important;
+    height: 350px;
+    position: relative;
+}
+
+.slider figure {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    animation: slide 15s infinite;
+}
+.slider img {
+    width: 600px;
+    height: 300px;
+}
+
+figcaption {
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 5px;
+}
+
+.slider figure:nth-child(1) { animation-delay: 0s; }
+.slider figure:nth-child(2) { animation-delay: 3s; }
+.slider figure:nth-child(3) { animation-delay: 6s; }
+.slider figure:nth-child(4) { animation-delay: 9s; }
+.slider figure:nth-child(5) { animation-delay: 12s; }
+
+@keyframes slide {
+    0% {opacity:0;}
+    10% {opacity:1;}
+    30% {opacity:1;}
+    40% {opacity:0;}
+    100% {opacity:0;}
+}
+.gallery{
+    display: flex;
+    gap: 5px; /*space between the figures*/
+}
+figure{
+    text-align: center;
+}
+figure img{
+    width: 200px;
+    height: auto;
+}
+figcaption{
+    margin-top: 5px;
+}
+.shapes{
+     display: flex;
+    gap: 5px; /*space between the figures*/
+}
+figure{
+    text-align: center;
+}
+figure img{
+    width: 200px;
+    height: auto;
+}
+figcaption{
+    margin-top: 5px;
+}
+.slider-container {
+    width: 600px;          /* visible area */
+    overflow-x: auto;      /* allow horizontal scroll */
+    scroll-snap-type: x mandatory; /* snap scrolling */
+    border: 1px solid #ccc;
+    padding: 10px;
+    }
+
+.slider {
+    display: flex;
+    gap: 20px;             /* space between images */
+}
+
+figure {
+    flex: 0 0 auto;        /* don’t shrink, take only necessary space */
+    width: 200px;
+    text-align: center;
+    scroll-snap-align: start; /* snap each figure to start */
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 5px;
+}
+.header {
+    display: flex;          /* put logo and heading in a row */
+    align-items: center;    /* vertically center them */
+    gap: 10px;              /* space between logo and heading */
+    padding: 10px;
+}
+.header .logo {
+    width: 500px !important;          /* adjust size of the logo */
+    height: auto;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 0;              /* remove default margin */
+}
+.header-banner {
+    position: relative;
+    width: 100%;           /* full width of the page */
+    height: 200px;         /* adjust height as needed */
+    overflow: hidden;      /* hide anything outside */
+}
+.header-banner img {
+    width: 100%;           /* stretch logo to full width */
+    height: 100%;          /* stretch to container height */
+    object-fit: cover;     /* maintain aspect ratio, crop if needed */
+    object-position: middle;
+}
+.header-banner h1 {
+    position: absolute;    /* place text over image */
+    top: 50%;              /* vertically center */
+    left: 50%;             /* horizontally center */
+    transform: translate(-50%, -50%);
+    color: white;          /* text color */
+    font-size: 40px;       /* big heading */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /* make text readable */
+}
+.ul{
+    font-size: medium;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;   /* stay on top */
+}
